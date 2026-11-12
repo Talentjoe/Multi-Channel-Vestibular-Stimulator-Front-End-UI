@@ -1,0 +1,5 @@
+{
+  "maxChannels": 8,
+  "defaultLimit": 1,
+  "simulationFrequency": 1000
+}

@@ -1,0 +1,300 @@
+{
+  "version": 2,
+  "nodes": [
+    {
+      "id": "B2",
+      "type": "dynamic_input",
+      "name": "Live Amplitude",
+      "params": {
+        "value": 0.5,
+        "min": 0,
+        "max": 1,
+        "step": 0.01
+      },
+      "status": "idle",
+      "position": {
+        "x": 20,
+        "y": 20
+      }
+    },
+    {
+      "id": "B3",
+      "type": "wave_sine",
+      "name": "Sine Wave",
+      "params": {
+        "frequency": 1,
+        "amplitude": 0.5,
+        "phase": 0,
+        "offset": 0
+      },
+      "status": "idle",
+      "position": {
+        "x": 260,
+        "y": 20
+      }
+    },
+    {
+      "id": "B4",
+      "type": "stimulate_output",
+      "name": "Channel 1",
+      "params": {
+        "channel": 1
+      },
+      "status": "idle",
+      "position": {
+        "x": 540,
+        "y": 20
+      }
+    },
+    {
+      "id": "B5",
+      "type": "stimulate_output",
+      "name": "Channel 2",
+      "params": {
+        "channel": 2
+      },
+      "status": "idle",
+      "position": {
+        "x": 540,
+        "y": 210
+      }
+    },
+    {
+      "id": "B6",
+      "type": "wave_square",
+      "name": "Square Wave",
+      "params": {
+        "frequency": 1,
+        "amplitude": 0.5,
+        "phase": 0,
+        "offset": 0,
+        "duty": 0.5
+      },
+      "status": "idle",
+      "position": {
+        "x": 820,
+        "y": 20
+      }
+    },
+    {
+      "id": "B7",
+      "type": "stimulate_output",
+      "name": "Channel 3",
+      "params": {
+        "channel": 3
+      },
+      "status": "idle",
+      "position": {
+        "x": 1100,
+        "y": 20
+      }
+    },
+    {
+      "id": "B8",
+      "type": "stimulate_output",
+      "name": "Channel 4",
+      "params": {
+        "channel": 4
+      },
+      "status": "idle",
+      "position": {
+        "x": 1100,
+        "y": 210
+      }
+    },
+    {
+      "id": "B9",
+      "type": "wave_triangle",
+      "name": "Triangle Wave",
+      "params": {
+        "frequency": 1,
+        "amplitude": 0.5,
+        "phase": 0,
+        "offset": 0,
+        "duty": 0.5
+      },
+      "status": "idle",
+      "position": {
+        "x": 260,
+        "y": 500
+      }
+    },
+    {
+      "id": "B10",
+      "type": "stimulate_output",
+      "name": "Channel 5",
+      "params": {
+        "channel": 5
+      },
+      "status": "idle",
+      "position": {
+        "x": 540,
+        "y": 500
+      }
+    },
+    {
+      "id": "B11",
+      "type": "stimulate_output",
+      "name": "Channel 6",
+      "params": {
+        "channel": 6
+      },
+      "status": "idle",
+      "position": {
+        "x": 540,
+        "y": 690
+      }
+    },
+    {
+      "id": "B12",
+      "type": "wave_sawtooth",
+      "name": "Sawtooth Wave",
+      "params": {
+        "frequency": 1,
+        "amplitude": 0.5,
+        "phase": 0,
+        "offset": 0,
+        "direction": "rising"
+      },
+      "status": "idle",
+      "position": {
+        "x": 820,
+        "y": 500
+      }
+    },
+    {
+      "id": "B13",
+      "type": "stimulate_output",
+      "name": "Channel 7",
+      "params": {
+        "channel": 7
+      },
+      "status": "idle",
+      "position": {
+        "x": 1100,
+        "y": 500
+      }
+    },
+    {
+      "id": "B14",
+      "type": "stimulate_output",
+      "name": "Channel 8",
+      "params": {
+        "channel": 8
+      },
+      "status": "idle",
+      "position": {
+        "x": 1100,
+        "y": 690
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "sourceBlockId": "B2",
+      "sourcePortId": "out",
+      "targetBlockId": "B3",
+      "targetPortId": "param:amplitude",
+      "signalType": "number"
+    },
+    {
+      "id": "e2",
+      "sourceBlockId": "B3",
+      "sourcePortId": "positive",
+      "targetBlockId": "B4",
+      "targetPortId": "in",
+      "signalType": "number"
+    },
+    {
+      "id": "e3",
+      "sourceBlockId": "B3",
+      "sourcePortId": "negative",
+      "targetBlockId": "B5",
+      "targetPortId": "in",
+      "signalType": "number"
+    },
+    {
+      "id": "e4",
+      "sourceBlockId": "B2",
+      "sourcePortId": "out",
+      "targetBlockId": "B6",
+      "targetPortId": "param:amplitude",
+      "signalType": "number"
+    },
+    {
+      "id": "e5",
+      "sourceBlockId": "B6",
+      "sourcePortId": "positive",
+      "targetBlockId": "B7",
+      "targetPortId": "in",
+      "signalType": "number"
+    },
+    {
+      "id": "e6",
+      "sourceBlockId": "B6",
+      "sourcePortId": "negative",
+      "targetBlockId": "B8",
+      "targetPortId": "in",
+      "signalType": "number"
+    },
+    {
+      "id": "e7",
+      "sourceBlockId": "B2",
+      "sourcePortId": "out",
+      "targetBlockId": "B9",
+      "targetPortId": "param:amplitude",
+      "signalType": "number"
+    },
+    {
+      "id": "e8",
+      "sourceBlockId": "B9",
+      "sourcePortId": "positive",
+      "targetBlockId": "B10",
+      "targetPortId": "in",
+      "signalType": "number"
+    },
+    {
+      "id": "e9",
+      "sourceBlockId": "B9",
+      "sourcePortId": "negative",
+      "targetBlockId": "B11",
+      "targetPortId": "in",
+      "signalType": "number"
+    },
+    {
+      "id": "e10",
+      "sourceBlockId": "B2",
+      "sourcePortId": "out",
+      "targetBlockId": "B12",
+      "targetPortId": "param:amplitude",
+      "signalType": "number"
+    },
+    {
+      "id": "e11",
+      "sourceBlockId": "B12",
+      "sourcePortId": "positive",
+      "targetBlockId": "B13",
+      "targetPortId": "in",
+      "signalType": "number"
+    },
+    {
+      "id": "e12",
+      "sourceBlockId": "B12",
+      "sourcePortId": "negative",
+      "targetBlockId": "B14",
+      "targetPortId": "in",
+      "signalType": "number"
+    }
+  ],
+  "settings": {
+    "frequency": 1000,
+    "limit": 1
+  },
+  "viewport": {
+    "x": 12,
+    "y": 12,
+    "zoom": 0.7
+  },
+  "displayRefreshHz": 30
+}
